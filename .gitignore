@@ -1,0 +1,6 @@
+# Eclipse stuff.
+/bin
+/target
+/.classpath
+/.project
+/.settings/
