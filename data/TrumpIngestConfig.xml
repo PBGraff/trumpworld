@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+
+    COPYRIGHT NOTICE
+
+    Copyright (c) 2013-2017 The Johns Hopkins University/Applied Physics Laboratory
+
+    All rights reserved.
+
+    This material may only be used, modified, or reproduced by or for the U.S. Government pursuant to
+    the license rights granted under FAR clause 52.227-14 or DFARS clauses 252.227-7013/7014.
+
+    For any other permissions, please contact the Legal Office at JHU/APL.
+
+-->
+<files>
+  
+  <file name="/Users/graffpb1/EclipseWorkspace/trumpworld/data/org-org-connections.csv"
+            delimiter="," startingRecord="2" parser="csv">
+
+     <entity index="org1" type="organization" idHashing="false">
+         <attribute name="name" column="0" sqlType="VARCHAR(100)" isKey="1"/>
+     </entity>
+     
+     <entity index="org2" type="organization" idHashing="false">
+         <attribute name="name" column="1" sqlType="VARCHAR(100)" isKey="1"/>
+     </entity>
+     
+     <link from="org1" to="org2" type="connection">
+         <attribute name="connection_type" column="2" sqlType="VARCHAR(1000)"/>
+         <attribute name="data_source" column="3" sqlType="VARCHAR(1000)"/>
+     </link>  
+     
+  </file>
+  
+  <file name="/Users/graffpb1/EclipseWorkspace/trumpworld/data/person-person-connections.csv"
+            delimiter="," startingRecord="2" parser="csv">
+
+     <entity index="person1" type="person" idHashing="false">
+         <attribute name="name" column="0" sqlType="VARCHAR(100)" isKey="1"/>
+     </entity>
+     
+     <entity index="person2" type="person" idHashing="false">
+         <attribute name="name" column="1" sqlType="VARCHAR(100)" isKey="1"/>
+     </entity>
+     
+     <link from="person1" to="person2" type="connection">
+         <attribute name="connection_type" column="2" sqlType="VARCHAR(1000)"/>
+         <attribute name="data_source" column="3" sqlType="VARCHAR(1000)"/>
+     </link>  
+     
+  </file>
+  
+  <file name="/Users/graffpb1/EclipseWorkspace/trumpworld/data/person-org-connections.csv"
+            delimiter="," startingRecord="2" parser="csv">
+
+     <entity index="person" type="person" idHashing="false">
+         <attribute name="name" column="1" sqlType="VARCHAR(100)" isKey="1"/>
+     </entity>
+     
+     <entity index="org" type="organization" idHashing="false">
+         <attribute name="name" column="0" sqlType="VARCHAR(100)" isKey="1"/>
+     </entity>
+     
+     <link from="person" to="org" type="connection">
+         <attribute name="connection_type" column="2" sqlType="VARCHAR(1000)"/>
+         <attribute name="data_source" column="3" sqlType="VARCHAR(1000)"/>
+     </link>  
+     
+  </file>
+  
+</files>
